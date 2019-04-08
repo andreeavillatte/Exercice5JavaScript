@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <title>Exercice5JavaScript</title>
+</head>
+<body>
+    <div class="container p-3 bg-secondary text-center justify-content-center">
+    <form class="center">
+            <!-- Premier nombre -->
+            <label class="d-block" for="nombre1">Inserer un premiere nombre à virgule.</label>
+            <input class="d-inline-block" id="nombre1" type="text" placeholder="1234.56789">
+            <!-- Deuxième nombre -->
+            <label class="d-block" for="nombre2">Inserer un deuxième nombre à virgule</label>
+            <input id="nombre2" type="text" placeholder="1234.56789">
+        </form>
+        <p>Appuyer "Valider" pour faire le calcul.</p>
+        <button onclick="myFunction()">Valider</button>
+    <!-- SCRIIIIIIIIIIIIIIIIIIIIPT -->
+</div>
+
+<script>
+        function myFunction() {
+            // Récuperation des variables
+            var nombre1 = document.getElementById("nombre1").value;
+            var nombre2 = document.getElementById("nombre2").value;
+            // Tronquer seulement le premier nombre
+            nombre1Trunc = Math.trunc(nombre1);
+            // Multiplier les deux nombres
+            multiplication = nombre1Trunc * nombre2;
+
+            alert("1er nombre : " + nombre1Trunc + "\n2ème nombre: " + nombre2 + "\nMultiplication : " + multiplication);
+        } // fin de fonction 
+    </script>
+</body>
+
+</html>
