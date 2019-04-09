@@ -23,18 +23,22 @@
 </div>
 
 <script>
-        function myFunction() {
-            // Récuperation des variables
-            var nombre1 = document.getElementById("nombre1").value;
-            var nombre2 = document.getElementById("nombre2").value;
-            // Tronquer seulement le premier nombre
-            nombre1Trunc = Math.trunc(nombre1);
-            // Multiplier les deux nombres
-            multiplication = nombre1Trunc * nombre2;
-
+    function myFunction() {
+        // Récuperation des variables
+        var nombre1 = document.getElementById("nombre1").value;
+        var nombre2 = document.getElementById("nombre2").value;
+        // Tronquer seulement le premier nombre
+        nombre1Trunc = Math.trunc(nombre1);
+        // Multiplier les deux nombres
+        multiplication = nombre1Trunc * nombre2;
+        // Verifier si la saisie est un nombre
+        if (isNaN(nombre1) || isNaN(nombre2)){
+            alert("Merci de n'entrer que des chiffres à virgule...");
+        } else {
             alert("1er nombre : " + nombre1Trunc + "\n2ème nombre: " + nombre2 + "\nMultiplication : " + multiplication);
-        } // fin de fonction 
-    </script>
+        }   
+    } // fin de fonction 
+</script>
 </body>
 
 </html>
