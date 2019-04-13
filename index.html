@@ -1,44 +1,45 @@
+<!-- ne pas modifier le html et le head -->
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <title>Exercice5JavaScript</title>
-</head>
-<body>
-    <div class="container p-3 bg-secondary text-center justify-content-center">
-    <form class="center">
-            <!-- Premier nombre -->
-            <label class="d-block" for="nombre1">Inserer un premiere nombre à virgule.</label>
-            <input class="d-inline-block" id="nombre1" type="text" placeholder="1234.56789">
-            <!-- Deuxième nombre -->
-            <label class="d-block" for="nombre2">Inserer un deuxième nombre à virgule</label>
-            <input id="nombre2" type="text" placeholder="1234.56789">
-        </form>
-        <p>Appuyer "Valider" pour faire le calcul.</p>
-        <button onclick="myFunction()">Valider</button>
-    <!-- SCRIIIIIIIIIIIIIIIIIIIIPT -->
-</div>
 
-<script>
-    function myFunction() {
-        // Récuperation des variables
-        var nombre1 = document.getElementById("nombre1").value;
-        var nombre2 = document.getElementById("nombre2").value;
-        // Tronquer seulement le premier nombre
-        nombre1Trunc = Math.trunc(nombre1);
-        // Multiplier les deux nombres
-        multiplication = nombre1Trunc * nombre2;
-        // Verifier si la saisie est un nombre
-        if (isNaN(nombre1) || isNaN(nombre2)){
-            alert("Merci de n'entrer que des chiffres à virgule...");
-        } else {
-            alert("1er nombre : " + nombre1Trunc + "\n2ème nombre: " + nombre2 + "\nMultiplication : " + multiplication);
-        }   
-    } // fin de fonction 
-</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/img/Linux-icon.png">
+    <title>Exo5Javascript1</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <!-- START Bootstrap-Cookie-Alert -->
+    <div class="container">
+        <!-- container de la page pour mise en forme bootstrap, ne pas toucher -->
+    
+        <main>
+            <span class="bg-primary">Exercice 5 :
+
+                Demander à l’utilisateur deux nombres à virgule. Ne garder que la partie entière du premier .
+Les multiplier et afficher le résultat dans une boîte de dialogue.</span>
+            <p class=" font-weight-bold text-danger">Saisir deux nombres à virgule</p>
+            <form>
+                <label for="firstNumber">Premier nombre : </label>
+                <input type="text" id="firstNumber" name="firstNumber" placeholder="1234.567"/><br/>
+                <label for="secondNumber">Deuxième nombre : </label>
+                <input type="text" id="secondNumber" name="secondNumber" placeholder="1234.567"/><br/>
+                <p>Appuyer "Valider" pour faire le calcul.</p>
+                <button id="submit" name ="submit" onclick="multiplication()">Valider</button>
+            </form>
+        </main>
+    </div>
+    <!-- scripts boostrap -->
+    <script src="js/main.js"></script> <!--  mon script js perso -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 </body>
 
 </html>
